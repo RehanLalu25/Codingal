@@ -1,0 +1,5 @@
+print("welcome to the house")
+print(456)
+print("Hello World \n") 
+print("Hello",67)
+print("Welcome to",end="*")

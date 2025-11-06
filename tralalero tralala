@@ -1,0 +1,4 @@
+first_list = ['abcd',147, 2.43,'Tom',74.9]
+small_list = [111, 'Tom']
+print(first_list)
+print()
