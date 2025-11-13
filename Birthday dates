@@ -1,0 +1,10 @@
+Reena = "october; 5"
+Sallu = "november; 1"
+Govind = "june; 7"
+Jaan = "january; 3"
+Gokul = "august; 2"
+print("Reena's birthday",Reena)
+print("Sallu's birthday",Sallu)
+print("Govind's birthday",Govind)
+print("Jaan's birthday",Jaan)
+print("Gokul's birthday",Gokul)
