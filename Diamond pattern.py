@@ -16,14 +16,12 @@ for i in range(1,half_diamond_row + 1):
     print()
 space = 1
 # lower part 
-for i in range(1,half_diamond_row + 1):
-    for j in range(1,space + 1):
-        print(end = " ")
+for i in range(1,half_diamond_row):
+    for j in range(space):
+        print(" ",end = "")
     space = space + 1
     num = 1
-    for j in range(1,2*(half_diamond_row-1)):
-        print(end = str(num))
+    for j in range(1,2*(half_diamond_row-i)+1):
+        print(num,end= "")
         num = num + 1
-    print()
-space = 1       
-        
+    print()     
