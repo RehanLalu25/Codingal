@@ -5,7 +5,7 @@ screen.bgcolor("lightblue")   # background colour
 
 pen = turtle.Turtle()
 pen.color("purple")           # square colour
-pen.pensize(3)
+pen.pensize(10)
 pen.speed(3)
 
 for i in range(4):
