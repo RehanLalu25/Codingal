@@ -99,31 +99,37 @@ class Fireball(Entity):
                 destroy(self)
 
 # ---- LIGHTNING ----
+# ---- LIGHTNING ----
 class Lightning(Entity):
     def __init__(self, position, direction):
         super().__init__(
             model='cube',
             color=color.cyan,
-            scale=(0.2,0.2,5),   # long thin bolt
+            scale=(0.2, 0.2, 5),
             position=position,
             collider='box'
         )
         self.direction = direction.normalized()
         self.speed = 25
-        self.life = 0.2  # short-lived
+        self.life = 0.2
+
     def update(self):
         self.position += self.direction * self.speed * time.dt
         self.life -= time.dt
+
         if self.life <= 0:
             destroy(self)
-        if enemy and enemy.enabled:
-            if distance(self.position, enemy.position) < 1.5:
-                enemy.take_damage(50)
-                destroy(self)
+            return
 
+        # SAFE enemy check
+        if 'enemy' in globals():
+            if enemy and enemy.enabled and enemy.parent:
+                if distance(self.position, enemy.position) < 1.5:
+                    enemy.take_damage(50)
+                    destroy(self)
 # ---- BLOCK TYPES ----
 block_types = {'1':'grass.png','2':'stone.png','3':'brick.png','4':'wood.png'}
-current_block = block_types['1']
+current_block = block_types['2']
 boxes = []
 
 # ---- GROUND ----
