@@ -3,7 +3,7 @@ class Flashcard:
         self.word = word
         self.meaning = meaning
     def __str__(self):
-        return self.word+('+self.meaning+')
+        return self.word+'('+self.meaning+')'
 flash = []
 print("Welcome to flashcard application")
 while(True):
