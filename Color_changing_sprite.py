@@ -28,10 +28,10 @@ def main():
                 done = True
 
         pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_LEFT]: x -= 3
-        if pressed[pygame.K_RIGHT]: x += 3
-        if pressed[pygame.K_UP]: y -= 3
-        if pressed[pygame.K_DOWN]: y += 3
+        if pressed[pygame.K_a]: x -= 3
+        if pressed[pygame.K_d]: x += 3
+        if pressed[pygame.K_w]: y -= 3
+        if pressed[pygame.K_s]: y += 3
 
         x = min(max(0, x), screen_width - sprite_width)
         y = min(max(0, y), screen_height - sprite_height)
