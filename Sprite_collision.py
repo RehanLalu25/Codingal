@@ -10,9 +10,9 @@ FONT_SIZE = 72
 pygame.init()
 
 # Load and transform the background image
-background_image = pygame.transform.scale(pygame.image.load("C:\\Users\\LALU\\Downloads\\ChatGPT Image Feb 20, 2026, 07_42_40 PM.png"),
+background_image = pygame.transform.scale(pygame.image.load("C:\\Users\\LALU\\Downloads\\flappy bird background.png"),
                                           (SCREEN_WIDTH, SCREEN_HEIGHT))
-
+"C:\\Users\\LALU\\Downloads\\flappy bird background.png"
 # Load font once at the beginning
 font = pygame.font.SysFont("Times New Roman", FONT_SIZE)
 
@@ -65,8 +65,8 @@ while running:
 
     if not won:
         keys = pygame.key.get_pressed()
-        x_change = (keys[pygame.K_RIGHT] -keys[pygame.K_LEFT]) * MOVEMENT_SPEED
-        y_change = (keys[pygame.K_DOWN] - keys[pygame.K_UP]) * MOVEMENT_SPEED
+        x_change = (keys[pygame.K_d] -keys[pygame.K_a]) * MOVEMENT_SPEED
+        y_change = (keys[pygame.K_s] - keys[pygame.K_w]) * MOVEMENT_SPEED
         sprite1.move(x_change, y_change)
 
         if sprite1.rect.colliderect(sprite2.rect):
